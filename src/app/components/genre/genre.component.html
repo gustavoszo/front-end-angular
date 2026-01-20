@@ -1,8 +1,8 @@
-<section class="genres">
+<section class="genres" [ngClass]="genre().id">
     <h3 class="text-h3-silver">
         {{genre().value}}
+        <span class="highlight-line highlight-line--low" [ngClass]="genre().id"></span>
     </h3>
-    <span class="highlight-line highlight-line--low"></span>
 </section>
 
 <div class="books-genre">
@@ -15,6 +15,6 @@
     @else {
         @for (book of genre().books; track book) {
             <app-book [book]="book"></app-book>
-        }   
+        }  
     }    
 </div>
