@@ -1,0 +1,20 @@
+<section class="genres">
+    <h3 class="text-h3-silver">
+        {{genre().value}}
+    </h3>
+    <span class="highlight-line highlight-line--low"></span>
+</section>
+
+<div class="books-genre">
+    @if(genre().books.length === 0) {
+        <div class="text-empty-books">
+            <img src="sem-livros.png" alt="Sem livros neste gênero">
+            <p>Não há livros neste gênero ainda</p>
+        </div>
+    }
+    @else {
+        @for (book of genre().books; track book) {
+            <app-book [book]="book"></app-book>
+        }   
+    }    
+</div>

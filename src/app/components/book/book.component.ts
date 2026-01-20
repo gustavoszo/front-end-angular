@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
+import { Book } from './book';
 
 @Component({
   selector: 'app-book',
@@ -7,15 +8,11 @@ import { Component } from '@angular/core';
   styleUrl: './book.component.css'
 })
 export class BookComponent {
+  book = input.required<Book>();
 
   changeFavorite(): void {
-    this.book.favorite = !this.book.favorite;
+    this.book().favorite = !this.book().favorite;
   }
 
-  book = {
-    title: 'As ondas',
-    author: 'Virginia Woolf',
-    favorite: false,
-    image: "https://www.bing.com/th?id=OPHS.Paf8oDCYCsAcow474C474&o=5&pid=21.1&w=140&h=140&qlt=100&dpr=1&o=2"
-  };
+ 
 }

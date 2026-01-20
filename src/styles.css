@@ -4,6 +4,19 @@ body, html {
     padding: 0;
 }
 
+.text-title {
+  font-family: var(--font-prata);
+  font-size: 40px;
+  font-weight: var(--font-weight-normal);
+  line-height: 72px;
+  text-align: center;
+  color: var(--color-primaria);
+}
+.highlight-line {
+  display: block;
+  margin: 0 auto;
+}
+
 :root {
   --font-montserrat: 'Montserrat', sans-serif;
   --font-prata: 'Prata', serif;
